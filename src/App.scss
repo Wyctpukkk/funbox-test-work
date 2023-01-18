@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Exo; /* Гарнитура шрифта */
+  src: url(fonts/Exo2.0-Thin.otf); /* Путь к файлу со шрифтом */
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      30%,
+      transparent,
+      70%,
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(img/back.png);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  font-family: Exo;
+  color: white;
+  text-align: center;
+}
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+  width: 320px;
+  height: 480px;
+  background-color: white;
+  border: 4px solid #1698d9;
+  border-radius: 15px;
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+}

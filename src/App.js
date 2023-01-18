@@ -1,23 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className="title">Ты сегодня покормил кота?</h1>
+      <section className="card-list">
+        <div className="card-item">
+          <div className="card">
+            <p className="upper-text"></p>
+            <p className="productname"></p>
+            <p className="with what"></p>
+            <p className="count-case"></p>
+            <p className="count-present"></p>
+            <img className="cat"></img>
+            <div className="circle">
+              <p className="count"></p>
+              <p className="weight"></p>
+            </div>
+          </div>
+          <div className="description">
+            <p>Чего сидишь? Порадуй котэ, купи.</p>
+          </div>
+        </div>
+        <div className="card-item">
+          <div className="card">
+            <p className="upper-text"></p>
+            <p className="productname"></p>
+            <p className="with what"></p>
+            <p className="count-case"></p>
+            <p className="count-present"></p>
+            <img className="cat"></img>
+            <div className="circle">
+              <p className="count"></p>
+              <p className="weight"></p>
+            </div>
+          </div>
+          <div className="description">
+            <p>Чего сидишь? Порадуй котэ, купи.</p>
+          </div>
+        </div>
+        <div className="card-item">
+          <div className="card">
+            <p className="upper-text"></p>
+            <p className="productname"></p>
+            <p className="with what"></p>
+            <p className="count-case"></p>
+            <p className="count-present"></p>
+            <img className="cat"></img>
+            <div className="circle">
+              <p className="count"></p>
+              <p className="weight"></p>
+            </div>
+          </div>
+          <div className="description">
+            <p>Чего сидишь? Порадуй котэ, купи.</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
