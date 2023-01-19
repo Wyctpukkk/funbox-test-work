@@ -26,7 +26,7 @@ body {
 
 .container {
   max-width: 1280px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -38,54 +38,54 @@ body {
   color: #f2f2f2;
   text-align: center;
 }
-.card-list {
+.card {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-.card-item {
-  margin: 30px;
-}
-.card-background {
-  width: 320px;
-  height: 480px;
-  background-color: #1698d9;
-  border: 4px solid #1698d9;
-  border-radius: 12px;
-  clip-path: polygon(13.4% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
-  z-index: -1;
-}
-.card {
-  position: relative;
-  background-color: #f2f2f2;
-  width: 320px;
-  height: 480px;
-  border-radius: 8px;
-  clip-path: polygon(13.4% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
-  overflow: hidden;
+  &__item {
+    margin: 30px;
+  }
+  &__background {
+    width: 320px;
+    height: 480px;
+    background-color: #1698d9;
+    border: 4px solid #1698d9;
+    border-radius: 12px;
+    clip-path: polygon(13.4% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+    z-index: -1;
+  }
+  &__front {
+    position: relative;
+    background-color: #f2f2f2;
+    width: 320px;
+    height: 480px;
+    border-radius: 8px;
+    clip-path: polygon(13.4% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+    overflow: hidden;
+  }
 }
 .text {
   padding-top: 10px;
   margin-left: 43px;
-}
-.upper-text {
-  margin-top: 5px;
-  color: #666666;
-  font-size: 16px;
-}
-.productname {
-  margin-top: 5px;
-  font-family: TrebBold;
-  font-size: 48px;
-}
-.with {
-  font-family: TrebBold;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.count-case {
-  font-size: 14px;
-  color: #666666;
+  &__upper {
+    margin-top: 5px;
+    color: #666666;
+    font-size: 16px;
+  }
+  &__name {
+    margin-top: 5px;
+    font-family: TrebBold;
+    font-size: 48px;
+  }
+  &__type {
+    font-family: TrebBold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  &__present {
+    font-size: 14px;
+    color: #666666;
+  }
 }
 .image-cat {
   position: absolute;
@@ -100,23 +100,23 @@ body {
   background-color: #1698d9;
   top: 390px;
   left: 225px;
+  &__count {
+    font-size: 42px;
+    position: relative;
+    top: 10px;
+    left: 30px;
+    color: #f2f2f2;
+  }
+  &__units {
+    font-size: 21px;
+    position: relative;
+    left: 30px;
+    color: #f2f2f2;
+  }
 }
-.description-text {
+.description__text {
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
-  color: #f2f2f2;
-}
-.count {
-  font-size: 42px;
-  position: relative;
-  top: 10px;
-  left: 30px;
-  color: #f2f2f2;
-}
-.weight {
-  font-size: 21px;
-  position: relative;
-  left: 30px;
   color: #f2f2f2;
 }
