@@ -1,6 +1,14 @@
 @font-face {
-  font-family: Exo; /* Гарнитура шрифта */
-  src: url(fonts/Exo2.0-Thin.otf); /* Путь к файлу со шрифтом */
+  font-family: Exo;
+  src: url(./assets/fonts/Exo2.0-Thin.otf);
+}
+@font-face {
+  font-family: Treb;
+  src: url(./assets/fonts/trebuc.ttf);
+}
+@font-face {
+  font-family: TrebBold;
+  src: url(./assets/fonts/trebucbd.ttf);
 }
 
 body {
@@ -12,11 +20,13 @@ body {
       70%,
       rgba(0, 0, 0, 0.6)
     ),
-    url(img/back.png);
+    url(./assets/img/back.png);
+  font-family: Treb;
 }
 
 .container {
   max-width: 1280px;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -24,18 +34,89 @@ body {
 }
 .title {
   font-family: Exo;
-  color: white;
+  font-size: 36px;
+  color: #f2f2f2;
   text-align: center;
 }
 .card-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.card {
+.card-item {
+  margin: 30px;
+}
+.card-background {
   width: 320px;
   height: 480px;
-  background-color: white;
+  background-color: #1698d9;
   border: 4px solid #1698d9;
-  border-radius: 15px;
-  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+  border-radius: 12px;
+  clip-path: polygon(13.4% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+  z-index: -1;
+}
+.card {
+  position: relative;
+  background-color: #f2f2f2;
+  width: 320px;
+  height: 480px;
+  border-radius: 8px;
+  clip-path: polygon(13.4% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+  overflow: hidden;
+}
+.text {
+  padding-top: 10px;
+  margin-left: 43px;
+}
+.upper-text {
+  margin-top: 5px;
+  color: #666666;
+  font-size: 16px;
+}
+.productname {
+  margin-top: 5px;
+  font-family: TrebBold;
+  font-size: 48px;
+}
+.with {
+  font-family: TrebBold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.count-case {
+  font-size: 14px;
+  color: #666666;
+}
+.image-cat {
+  position: absolute;
+  top: 215px;
+  left: -27px;
+}
+.circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1698d9;
+  top: 390px;
+  left: 225px;
+}
+.description-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f2f2f2;
+}
+.count {
+  font-size: 42px;
+  position: relative;
+  top: 10px;
+  left: 30px;
+  color: #f2f2f2;
+}
+.weight {
+  font-size: 21px;
+  position: relative;
+  left: 30px;
+  color: #f2f2f2;
 }
