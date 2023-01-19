@@ -23,7 +23,7 @@
   },
   {
     "id": 2,
-    "imageUrl": "./assets/img/cat.png",
+    "imageUrl": ".src/assets/img/cat.png",
     "upper": "Сказачное заморское яство",
     "productname": "Нямушка",
     "with": "с курой",
