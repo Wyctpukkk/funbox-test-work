@@ -9,11 +9,16 @@ export const CardItem = ({
   count,
   units,
   description,
+  description2,
+  description3,
+  style,
+  status,
+  changeAction,
 }) => {
   return (
     <>
-      <div className="card__item">
-        <div className="card__background">
+      <div className="card__item" onClick={() => changeAction(id)}>
+        <div className={status === 'enabled' ? style : style + ' ' + status}>
           <div className="card__front">
             <div className="text">
               <p className="text__upper">{upper}</p>
@@ -29,7 +34,19 @@ export const CardItem = ({
           </div>
         </div>
         <div className="description">
-          <p className="description__text">{description}</p>
+          <p
+            className={
+              status === 'enabled'
+                ? 'description__text'
+                : 'description__text disabled'
+            }
+          >
+            {status === 'enabled'
+              ? style === 'card__background'
+                ? description
+                : description2
+              : description3}
+          </p>
         </div>
       </div>
     </>
