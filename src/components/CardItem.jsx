@@ -17,8 +17,15 @@ export const CardItem = ({
 }) => {
   return (
     <>
-      <div className="card__item" onClick={() => changeAction(id)}>
-        <div className={status === 'enabled' ? style : style + ' ' + status}>
+      <div
+        className="card__item"
+        onMouseLeave={(e) => e.currentTarget.classList.add('light')}
+        onMouseEnter={(e) => e.currentTarget.classList.remove('light')}
+      >
+        <div
+          className={status === 'enabled' ? style : style + ' ' + status}
+          onClick={() => changeAction(id)}
+        >
           <div className="card__front">
             <div className="text">
               <p className="text__upper">{upper}</p>
@@ -46,6 +53,18 @@ export const CardItem = ({
                 ? description
                 : description2
               : description3}
+            <button
+              className={
+                status === 'enabled'
+                  ? style === 'card__background'
+                    ? 'btn-buy'
+                    : 'btn-buy selected'
+                  : 'btn-buy selected'
+              }
+              onClick={() => changeAction(id)}
+            >
+              купи
+            </button>
           </p>
         </div>
       </div>

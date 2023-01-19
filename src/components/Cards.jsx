@@ -1,6 +1,6 @@
 import { CardItem } from './CardItem';
 
-export const Cards = ({ cards, changeAction }) => {
+export const Cards = ({ cards, changeAction, setActive }) => {
   return (
     <>
       {cards.map((card) => {
@@ -20,6 +20,7 @@ export const Cards = ({ cards, changeAction }) => {
             style={card.style}
             status={card.status}
             changeAction={changeAction}
+            setActive={setActive}
           />
         );
       })}

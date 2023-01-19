@@ -5,19 +5,19 @@ import { useState } from 'react';
 
 function App() {
   const [cards, setCards] = useState(info);
-  let arr = [];
+
   const changeAction = (id) => {
+    let arr = [];
+    arr = [...cards];
     if (cards[id].status === 'disabled') {
     } else {
-      arr = [...cards];
       arr[id].style === 'card__background selected'
         ? (arr[id].style = 'card__background')
         : (arr[id].style = 'card__background selected');
       setCards(arr);
     }
-    console.log(arr);
-    console.log(cards[id].style);
   };
+
   return (
     <div className="container">
       <h1 className="title">Ты сегодня покормил кота?</h1>
